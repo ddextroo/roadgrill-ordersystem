@@ -1,0 +1,210 @@
+
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.roadgrill.ordering">
+	<uses-permission	android:name="android.permission.INTERNET"/>
+	<uses-permission	android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission	android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission	android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission	android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission	android:name="com.google.android.c2dm.permission.RECEIVE"/>
+	<permission
+		android:name="com.roadgrill.ordering.permission.C2D_MESSAGE"
+		android:protectionLevel="signature"/>
+	<uses-permission	android:name="com.roadgrill.ordering.permission.C2D_MESSAGE"/>
+	<uses-permission	android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission	android:name="android.permission.VIBRATE"/>
+	<uses-permission	android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission	android:name="com.sec.android.provider.badge.permission.READ"/>
+	<uses-permission	android:name="com.sec.android.provider.badge.permission.WRITE"/>
+	<uses-permission	android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+	<uses-permission	android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+	<uses-permission	android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+	<uses-permission	android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+	<uses-permission	android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+	<uses-permission	android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+	<uses-permission	android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+	<uses-permission	android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+	<uses-permission	android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+	<uses-permission	android:name="android.permission.READ_APP_BADGE"/>
+	<uses-permission	android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+	<uses-permission	android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
+	<uses-permission	android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
+	<uses-permission	android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+	<application
+		android:allowBackup="true"
+		android:label="Roadgrill Ordering System"
+		android:icon="@drawable/app_icon"
+		android:largeHeap="true"
+		android:usesCleartextTraffic="true"
+		android:theme="@style/AppTheme">
+		<activity
+			android:name=".MainActivity"
+			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+			android:hardwareAccelerated="true"
+			android:supportsPictureInPicture="true"
+			android:theme="@style/AppTheme.FullScreen"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action	android:name="android.intent.action.MAIN"/>
+				<category	android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".LoginActivity"
+			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+			android:hardwareAccelerated="true"
+			android:supportsPictureInPicture="true"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:name=".Register1Activity"
+			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+			android:hardwareAccelerated="true"
+			android:supportsPictureInPicture="true"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:name=".ChooseActivity"
+			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+			android:hardwareAccelerated="true"
+			android:supportsPictureInPicture="true"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:name=".MinActivity"
+			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+			android:hardwareAccelerated="true"
+			android:supportsPictureInPicture="true"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:name=".ForgotActivity"
+			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+			android:hardwareAccelerated="true"
+			android:supportsPictureInPicture="true"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:name=".HomeActivity"
+			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+			android:hardwareAccelerated="true"
+			android:supportsPictureInPicture="true"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:name=".AdminActivity"
+			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+			android:hardwareAccelerated="true"
+			android:supportsPictureInPicture="true"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:name=".BagActivity"
+			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+			android:hardwareAccelerated="true"
+			android:supportsPictureInPicture="true"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:name=".Pending1Activity"
+			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+			android:hardwareAccelerated="true"
+			android:supportsPictureInPicture="true"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:name=".InfoActivity"
+			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+			android:hardwareAccelerated="true"
+			android:supportsPictureInPicture="true"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:name=".UsersActivity"
+			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+			android:hardwareAccelerated="true"
+			android:supportsPictureInPicture="true"
+			android:screenOrientation="portrait"/>
+		<meta-data
+			android:name="com.google.android.gms.version"
+			android:value="@integer/google_play_services_version"/>
+		<provider
+			android:name="com.google.firebase.provider.FirebaseInitProvider"
+			android:authorities="com.roadgrill.ordering.firebaseinitprovider"
+			android:exported="false"
+			android:initOrder="100"/>
+		<service
+			android:name="com.google.firebase.components.ComponentDiscoveryService"
+			android:exported="false">
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar"/>
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar"/>
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar"/>
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+				android:value="com.google.firebase.components.ComponentRegistrar"/>
+		</service>
+		<service
+			android:name="com.google.firebase.messaging.FirebaseMessagingService"
+			android:exported="false">
+			<intent-filter	android:priority="-500">
+				<action	android:name="com.google.firebase.MESSAGING_EVENT"/>
+			</intent-filter>
+		</service>
+		<receiver
+			android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+			android:exported="true"
+			android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter>
+				<action	android:name="com.google.android.c2dm.intent.RECEIVE"/>
+			</intent-filter>
+		</receiver>
+		<meta-data
+			android:name="onesignal_app_id"
+			android:value="040d98b8-7680-4728-9b09-665ad8df0cb3"/>
+		<meta-data
+			android:name="onesignal_google_project_number"
+			android:value="str:REMOTE"/>
+		<receiver
+			android:name="com.onesignal.GcmBroadcastReceiver"
+			android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter	android:priority="999">
+				<action	android:name="com.google.android.c2dm.intent.RECEIVE">
+					<category	android:name="com.roadgrill.ordering"/>
+				</action>
+			</intent-filter>
+		</receiver>
+		<receiver	android:name="com.onesignal.NotificationOpenedReceiver"/>
+		<service	android:name="com.onesignal.GcmIntentService"/>
+		<service
+			android:name="com.onesignal.GcmIntentJobService"
+			android:permission="android.permission.BIND_JOB_SERVICE"/>
+		<service
+			android:name="com.onesignal.RestoreJobService"
+			android:permission="android.permission.BIND_JOB_SERVICE"/>
+		<service
+			android:name="com.onesignal.RestoreKickoffJobService"
+			android:permission="android.permission.BIND_JOB_SERVICE"/>
+		<service
+			android:name="com.onesignal.SyncService"
+			android:stopWithTask="true"/>
+		<service
+			android:name="com.onesignal.SyncJobService"
+			android:permission="android.permission.BIND_JOB_SERVICE"/>
+		<activity
+			android:name="com.onesignal.PermissionsActivity"
+			android:theme="@style/AppTheme.FullScreen"/>
+		<service	android:name="com.onesignal.NotificationRestoreService"/>
+		<receiver	android:name="com.onesignal.BootUpReceiver">
+			<intent-filter>
+				<action	android:name="android.intent.action.BOOT_COMPLETED">
+					<action	android:name="android.intent.action.QUICKBOOT_POWERON"/>
+				</action>
+			</intent-filter>
+		</receiver>
+		<receiver	android:name="com.onesignal.UpgradeReceiver">
+			<intent-filter>
+				<action	android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+			</intent-filter>
+		</receiver>
+		<uses-library
+			android:name="org.apache.http.legacy"
+			android:required="false"/>
+	</application>
+</manifest>
